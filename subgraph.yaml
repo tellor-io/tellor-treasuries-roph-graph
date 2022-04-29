@@ -1,0 +1,30 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: Contract
+    network: ropsten
+    source:
+      address: "0xb7C38be763D1eebcBF23F99678507ca4621448A0"
+      abi: Contract
+      startBlock: 11849101
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - TreasuryIssued
+        - TreasuryPaid
+        - TreasuryPurchased
+      abis:
+        - name: Contract
+          file: ./abis/Contract.json
+      eventHandlers:
+        - event: TreasuryIssued(uint256,uint256,uint256)
+          handler: handleTreasuryIssued
+        - event: TreasuryPaid(address,uint256)
+          handler: handleTreasuryPaid
+        - event: TreasuryPurchased(address,uint256)
+          handler: handleTreasuryPurchased
+      file: ./src/mapping.ts

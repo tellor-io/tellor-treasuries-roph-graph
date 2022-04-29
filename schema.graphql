@@ -1,0 +1,40 @@
+type TreasuryIssuedEntity @entity {
+  id: ID!
+  treasuryId: BigInt!
+  maxAmount: BigInt!
+  rate: BigInt!
+  dateStarted: BigInt!
+  purchasedAmount: BigInt!
+  duration: BigInt!
+  endVoteCount: BigInt!
+  endVoteCountRecorded: Boolean!
+  totalLocked: BigInt!
+}
+type TreasuryPaidEntity @entity {
+  id: ID!
+  investor: Bytes!
+  amountPaid: BigInt!
+  totalLocked: BigInt!
+  timestamp: BigInt!
+  dateStarted: BigInt!
+  maxAmount: BigInt!
+  rate: BigInt!
+  purchasedAmount: BigInt!
+  duration: BigInt!
+  endVoteCount: BigInt!
+  endVoteCountRecorded: Boolean!
+}
+type TreasuryPurchasedEntity @entity {
+  id: ID!
+  investor: Bytes!
+  amountBought: BigInt!
+  totalLocked: BigInt!
+  timestamp: BigInt!
+  dateStarted: BigInt!
+  maxAmount: BigInt!
+  rate: BigInt!
+  purchasedAmount: BigInt!
+  duration: BigInt!
+  endVoteCount: BigInt!
+  endVoteCountRecorded: Boolean!
+}
