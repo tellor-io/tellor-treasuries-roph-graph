@@ -33,7 +33,7 @@
   <h2 align="center">tellor-treasuries-roph-graph</h2>
 
   <p align="center">
-    This is the subgraph code for the Tellor Treasuries contract on Ethereum Mainnet.
+    This is the subgraph code for the Tellor Treasuries contract on Ropsten Testnet.
     <br />
     <br />
     <a href="https://github.com/tellor-io/tellor-treasuries-roph-graph/issues">Report Bug</a>
